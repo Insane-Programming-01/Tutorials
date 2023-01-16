@@ -1,0 +1,91 @@
+# Importing the math module
+import math
+# from math import *
+
+# sqrt - Square root of n 
+
+print(math.sqrt(121))
+
+# copysign(x,y) - copy sign of y to absolute value of x
+
+print(math.copysign(12,-8))
+
+# fabs - absolute value of n 
+
+print(math.fabs(-34.909))
+
+# factorial - 5 = 5 x 4 x 3 x 2 x 1 = 120
+
+print(math.factorial(4))
+
+# ceil function - smallest integer that is grater or equal to n
+# floor - greatest integer that is less that or equal to n
+
+print(math.ceil(12.45))
+print(math.floor(12.45))
+
+# fsum - accurate floating point sum
+
+li = [2,3,4,5,6]
+print(math.fsum(li))
+
+# gcd - greatest common divisor
+# lcm - least common multiple 
+
+print(math.gcd(12,2))
+print(math.lcm(12,2))
+
+# isclose(x,y) returns true if x and y are close to each other
+
+# print(math.isclose(12,12.01))
+
+import math
+
+# isfininte - true if x is neither an infinity or NaN
+
+print(math.isfinite(math.nan))
+print(math.isfinite(12))
+
+# isinf - true if x is positive or negative infinity
+
+print(math.isinf(math.inf))
+
+# isnan - true if x is NaN 
+
+print(math.isnan(math.nan))
+
+# nextafter - returns the next floating point value after x towards y
+
+print(math.nextafter(12.90,-1))
+
+
+# prod - Product of all the elements in a iterable
+
+li = [3,4,2,1,6]
+print(math.prod(li))
+
+# remainder 
+
+print(math.remainder(17,3))
+
+# trunc - returns the integer part removing the decimal points
+
+print(math.trunc(12.234234))
+
+# exp - returns e to the power of x, e = 2.718281
+
+print(math.exp(2))
+
+# log, log10
+
+print(math.log(2))
+
+# pow(m,n) - m to the power of n
+
+print(math.pow(2,10))
+
+# sin(angle), cos, tan - angle in radian
+
+print(math.sin(90))
+print(math.cos(90))
+print(math.tan(90))
