@@ -1,0 +1,59 @@
+# Everything About Random Module
+
+# Importing the random module
+import random
+import string
+
+# random method     
+# It chooses any float value between 0 and 1
+print(round(random.random(),3))
+
+# randint method
+# It chooses a random value integer between the given range
+print(random.randint(0,10))
+
+
+# Problem 1 - Generate a list of 20 random values between 1 to 1000
+li = []
+for i in range(20):
+    li.append(random.randint(1,1000))
+print(li)
+
+# randrange
+# randint method with step functionality
+print(random.randrange(0,10,3))
+
+
+# choice method
+# It chooses a random value from a sequence like list, tuple etc
+li = ['Python','Java',"C",'C#']
+print(random.choice(li))
+
+# uniform
+# Chooses a random float between
+print(random.uniform(2.5,5.0))
+
+# shuffle
+# Shuffle the position in a sequence
+print(li)
+random.shuffle(li)
+print('Shuffled',li)
+
+# Problem 2 - Generate Random Password
+
+integers = [str(i) for i in range(10)]
+lowercase = list(string.ascii_lowercase)
+uppercase = list(string.ascii_uppercase)
+special = ['%','&','$','_','@','#']
+
+All = integers + lowercase + uppercase + special
+
+password = ""
+
+for i in range(16):
+    password += random.choice(All)
+    # password = random.choice(All) + password
+
+print('Password -',password)
+
+
