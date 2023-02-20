@@ -1,0 +1,59 @@
+class Stack:
+
+    def __init__(self):
+        self.elements = []
+        self.maxsize = 5
+        self.top = -1
+
+    def push(self,value):
+        # check stack if filled or not
+
+        if self.top >= self.maxsize -1:
+            print('Stack is Overflow!')
+            return
+
+        self.top += 1
+        self.elements.append(value)
+
+        print(f'\nInserted element: {value}')
+        self.display()
+
+    def pop(self):
+
+        if self.top == -1:
+            print('Stack is Underflow!')
+            return
+
+        ele = self.elements.pop()
+        self.top -= 1
+
+        print(f'\nDeleted Element: {ele}')
+        self.display()
+
+    def display(self):
+        if self.top == -1:
+            print('Stack is Empty!')
+            return
+
+        print(f'Updated Stack: {self.elements}')
+
+S = Stack()
+while True:
+
+    choice = input('\nPUSH / POP / DISPLAY / EXIT: ').lower()
+
+    if choice == 'push':
+        value = input('Enter the Value: ')
+        S.push(value)
+
+    elif choice == 'pop':
+        S.pop()
+
+    elif choice == 'exit':
+        break
+
+    elif choice == 'display':
+        S.display()
+
+    else:
+        print('Invalid Input!')
